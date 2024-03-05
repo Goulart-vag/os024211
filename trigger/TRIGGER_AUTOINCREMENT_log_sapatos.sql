@@ -1,0 +1,10 @@
+CREATE TRIGGER log_saptos_autoincrement FOR LOG_SAPATOS
+ACTIVE BEFORE INSERT POSITION 0
+AS 
+BEGIN
+new.ID = gen_id("LOG_SAPATOS_GEN",1); 
+END;
+
+
+
+
